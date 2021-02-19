@@ -5,7 +5,20 @@ require:
 inherit_from: .rubocop_todo.yml
 
 AllCops:
+  NewCops: enable
   Exclude:
     - 'bin/*'
     - 'config/**/*'
     - 'db/schema.rb'
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+
+Style/SymbolArray:
+  EnforcedStyle: percent
