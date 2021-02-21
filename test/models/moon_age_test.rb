@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NewMoonTest < ActiveSupport::TestCase
+class MoonAgeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

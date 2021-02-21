@@ -12,11 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2021_02_16_135942) do
 
-  create_table "new_moons", charset: "utf8mb4", force: :cascade do |t|
+  create_table "moon_ages", charset: "utf8mb4", force: :cascade do |t|
     t.integer "year", null: false
     t.integer "month", null: false
-    t.integer "day", null: false
-    t.datetime "date", null: false
+    t.integer "state", default: 0, null: false
+    t.date "date", null: false
+    t.datetime "datetime", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
