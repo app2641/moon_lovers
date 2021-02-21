@@ -206,6 +206,9 @@ GEM
       rubocop (>= 0.90.0, < 2.0)
     ruby-progressbar (1.11.0)
     rubyzip (2.3.0)
+    seed-fu (2.3.9)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -252,6 +255,7 @@ DEPENDENCIES
   rubocop
   rubocop-performance
   rubocop-rails
+  seed-fu
   selenium-webdriver
   tzinfo-data
   web-console (>= 4.1.0)
