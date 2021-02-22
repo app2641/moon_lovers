@@ -14,7 +14,7 @@ class MoonAge < ApplicationRecord
   class << self
     def tonight
       today = Time.current
-      last_month = (today - 1.month).beginning_of_day
+      last_month = (today - 2.months).beginning_of_day
       new_moon = MoonAge.where(datetime: last_month..today.end_of_day).last
 
       difference = today - new_moon.datetime

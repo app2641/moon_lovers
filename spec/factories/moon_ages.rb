@@ -10,14 +10,21 @@ FactoryBot.define do
     datetime { today.beginning_of_day }
   end
 
-  trait :'202102' do
-    year { 2021 }
-    month { 2 }
-    date { '2021/02/12' }
-    datetime { '2021/02/12 04:06' }
+  trait :'20220501' do
+    year { 2022 }
+    month { 5 }
+    date { '2022/05/01' }
+    datetime { '2022/05/01 05:28' }
   end
 
-  trait :'202202' do
+  trait :'20220530' do
+    year { 2022 }
+    month { 5 }
+    date { '2022/05/30' }
+    datetime { '2022/05/30 20:30' }
+  end
+
+  trait :'20220201' do
     year { 2022 }
     month { 2 }
     date { '2022/02/01' }
