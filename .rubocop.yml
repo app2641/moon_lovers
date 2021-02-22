@@ -1,6 +1,7 @@
 require:
   - rubocop-performance
   - rubocop-rails
+  - rubocop-rspec
 
 inherit_from: .rubocop_todo.yml
 
@@ -10,6 +11,8 @@ AllCops:
     - 'bin/*'
     - 'config/**/*'
     - 'db/schema.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
 
 Style/ClassAndModuleChildren:
   EnforcedStyle: compact
