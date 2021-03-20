@@ -1,0 +1,1 @@
+release: bundle exec bin/rails db:migrate db:seed_fu
