@@ -51,6 +51,6 @@ test:
 #
 production:
   <<: *default
-  database: moon_lovers_production
-  username: moon_lovers
+  database: <%= ENV['MOON_LOVERS_DATABASE_NAME'] %>
+  username: <%= ENV['MOON_LOVERS_DATABASE_USER'] %>
   password: <%= ENV['MOON_LOVERS_DATABASE_PASSWORD'] %>
