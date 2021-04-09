@@ -13,19 +13,26 @@ class MoonAge < ApplicationRecord
 
   class << self
     def tonight
-      today = Time.current
-      last_month = today - 2.months
+      one_night(Time.current)
+    end
 
-      calculate(start_date: last_month, end_date: today)
+    def one_night(date)
+      last_month = date - 2.months
+
+      calculate(start_date: last_month, end_date: date)
     end
 
     private
 
     def calculate(start_date:, end_date:)
       new_moon = MoonAge.where(datetime: start_date.beginning_of_day..end_date.end_of_day).last
+      raise 'MoonAge record is not applicable' if new_moon.nil?
 
       difference = end_date - new_moon.datetime
       (difference / 60 / 60 / 24).round(1)
+    rescue StandardError => e
+      logger.error "#{e.message}, start_date: #{start_date}, end_date: #{end_date}"
+      0.0
     end
   end
 end
