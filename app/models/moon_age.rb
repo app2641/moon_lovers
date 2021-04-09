@@ -14,10 +14,17 @@ class MoonAge < ApplicationRecord
   class << self
     def tonight
       today = Time.current
-      last_month = (today - 2.months).beginning_of_day
-      new_moon = MoonAge.where(datetime: last_month..today.end_of_day).last
+      last_month = today - 2.months
 
-      difference = today - new_moon.datetime
+      calculate(last_month, today)
+    end
+
+    private
+
+    def calculate(start_date, end_date)
+      new_moon = MoonAge.where(datetime: start_date.beginning_of_day..end_date.end_of_day).last
+
+      difference = end_date - new_moon.datetime
       (difference / 60 / 60 / 24).round(1)
     end
   end
