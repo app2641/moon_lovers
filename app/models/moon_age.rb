@@ -19,7 +19,8 @@ class MoonAge < ApplicationRecord
     def one_night(date)
       last_month = date - 2.months
 
-      calculate(start_date: last_month, end_date: date)
+      age = calculate(start_date: last_month, end_date: date)
+      MoonAge::Age.new(age: age)
     end
 
     private

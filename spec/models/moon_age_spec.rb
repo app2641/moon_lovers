@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe MoonAge, type: :model do
   describe '#tonight' do
-    subject { travel_to(tonight) { MoonAge.tonight } }
+    subject { travel_to(tonight) { MoonAge.tonight.age } }
 
     context 'when 2022/03/02, longer than 1 month' do
       let(:tonight) { Time.zone.local(2022, 3, 2).end_of_day }
@@ -27,7 +27,7 @@ RSpec.describe MoonAge, type: :model do
   end
 
   describe '#one_night' do
-    subject { MoonAge.one_night(date) }
+    subject { MoonAge.one_night(date).age }
 
     context 'when 2022/03/02, longer than 1 month' do
       let(:date) { Time.zone.local(2022, 3, 2).end_of_day }

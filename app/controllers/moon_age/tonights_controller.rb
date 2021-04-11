@@ -2,8 +2,8 @@
 
 class MoonAge::TonightsController < ApplicationController
   def show
-    age = MoonAge.tonight
+    tonight = MoonAge.tonight
 
-    render json: { age: age }, status: :ok
+    render json: { age: tonight.age }, status: :ok
   end
 end
