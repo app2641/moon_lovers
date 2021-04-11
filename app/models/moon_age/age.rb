@@ -6,4 +6,8 @@ class MoonAge::Age
   def initialize(age:)
     @age = age
   end
+
+  def full_moon?
+    age.round == 15
+  end
 end
