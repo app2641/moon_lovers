@@ -124,6 +124,8 @@ GEM
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
     faraday-net_http (1.0.1)
+    faraday_middleware (1.0.0)
+      faraday (~> 1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     googleauth (0.16.1)
@@ -276,6 +278,8 @@ DEPENDENCIES
   config
   dotenv-rails
   factory_bot_rails
+  faraday
+  faraday_middleware
   googleauth
   jbuilder (~> 2.7)
   mysql2 (~> 0.5)

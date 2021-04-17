@@ -3,6 +3,7 @@
 class MoonAge
   class Age
     attr_reader :age
+    alias value age
 
     def initialize(age:)
       @age = age

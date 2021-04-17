@@ -17,6 +17,15 @@ AllCops:
 Metrics/BlockLength:
   Max: 50
 
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/MethodLength:
+  Max: 20
+
+Rails/Delegate:
+  Enabled: false
+
 Style/ClassAndModuleChildren:
   EnforcedStyle: nested
 

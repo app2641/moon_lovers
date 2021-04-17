@@ -15,6 +15,9 @@ class GoogleAuth
   end
 
   def access_token
-    @access_token ||= auth.fetch_access_token!
+    return @access_token if @access_token.present?
+
+    response = auth.fetch_access_token!
+    @access_token = response['access_token']
   end
 end
