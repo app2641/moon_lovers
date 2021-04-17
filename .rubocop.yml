@@ -18,7 +18,7 @@ Metrics/BlockLength:
   Max: 50
 
 Style/ClassAndModuleChildren:
-  EnforcedStyle: compact
+  EnforcedStyle: nested
 
 Style/Documentation:
   Enabled: false
