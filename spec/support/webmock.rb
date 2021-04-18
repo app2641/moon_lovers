@@ -2,4 +2,4 @@
 
 require 'webmock/rspec'
 
-Webmock.disable_net_connect!
+WebMock.disable_net_connect!

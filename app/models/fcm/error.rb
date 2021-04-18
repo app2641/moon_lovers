@@ -40,7 +40,7 @@ module Fcm
                   StandardError
                 end
 
-        raise klass, response.body[:error][:message] if klass.present?
+        raise klass, response.body if klass.present?
       end
     end
   end
