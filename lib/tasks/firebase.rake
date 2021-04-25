@@ -9,11 +9,9 @@ namespace :firebase do
     payload = {
       message: {
         topic: Fcm::Topic::TONIGHT,
-        android: {
-          data: {
-            title: '今夜の月齢',
-            body: "今夜の月齢は#{age.value}です"
-          }
+        notification: {
+          title: '月齢通知',
+          body: "今夜の月齢は#{age.value}です"
         }
       }
     }
