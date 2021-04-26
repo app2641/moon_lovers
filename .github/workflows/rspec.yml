@@ -14,7 +14,7 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  rspec:
     runs-on: ubuntu-latest
     env:
       RAILS_ENV: test
@@ -45,8 +45,6 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Rubocop
-      run: bundle exec rubocop
     - name: Setup database
       run: |
         bundle exec rails db:create
@@ -55,3 +53,19 @@ jobs:
       run: bundle exec rails db:seed_fu
     - name: Run tests
       run: bundle exec rspec
+
+  rubocop:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['2.7.1']
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+    - name: setup bundle
+      run: bundle install
+    - name: run rubocop
+      run: bundle exec rubocop
