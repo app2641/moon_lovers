@@ -45,8 +45,8 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Linter
-      run: bundle exec rubocop --config .rubocop.yml --format progress --parallel
+    - name: Rubocop
+      run: bundle exec rubocop
     - name: Setup database
       run: |
         bundle exec rails db:create
