@@ -65,7 +65,14 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
-    - name: setup bundle
-      run: bundle install
-    - name: run rubocop
+    - name: Cache gems
+      uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gem-
+    - name: Install dependencies
+      run: bundle install --path vendor/bundle --without production
+    - name: Run rubocop
       run: bundle exec rubocop
