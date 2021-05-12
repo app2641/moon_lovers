@@ -3,6 +3,10 @@
 require 'rails_helper'
 
 RSpec.describe MoonAge, type: :model do
+  around do |example|
+    Time.use_zone('Asia/Tokyo', &example)
+  end
+
   describe '#tonight' do
     subject { travel_to(tonight) { MoonAge.tonight.age } }
 
@@ -23,6 +27,17 @@ RSpec.describe MoonAge, type: :model do
       end
 
       it { is_expected.to eq 1.1 }
+    end
+
+    context 'when JST time' do
+      let(:tonight) { Time.zone.local(2021, 5, 12, 21, 35) }
+
+      before do
+        create :moon_age,
+               year: 2021, month:	5, state: 0, date: '2021/05/12', datetime: '2021/05/12 04:00'
+      end
+
+      it { is_expected.to eq 0.7 }
     end
   end
 

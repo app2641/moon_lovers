@@ -13,14 +13,18 @@ class MoonAge < ApplicationRecord
 
   class << self
     def tonight
-      one_night(Time.current)
+      Time.use_zone('Asia/Tokyo') do
+        one_night(Time.current)
+      end
     end
 
     def one_night(date)
-      last_month = date - 2.months
+      Time.use_zone('Asia/Tokyo') do
+        last_month = date - 2.months
 
-      age = calculate(start_date: last_month, end_date: date)
-      MoonAge::Age.new(age: age)
+        age = calculate(start_date: last_month, end_date: date)
+        MoonAge::Age.new(age: age)
+      end
     end
 
     private
