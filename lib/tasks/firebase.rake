@@ -3,7 +3,9 @@
 namespace :firebase do
   desc 'Notify the age of moon to Firebase'
   task notify_moon_age: :environment do
-    tonight = Time.current.beginning_of_day + 22.hours
+    tonight = Time.use_zone('Asia/Tokyo') do
+      Time.current.beginning_of_day + 22.hours
+    end
     age = MoonAge.one_night(tonight)
 
     payload = {
