@@ -23,6 +23,9 @@ Metrics/CyclomaticComplexity:
 Metrics/MethodLength:
   Max: 20
 
+Rails/EnvironmentVariableAccess:
+  AllowReads: true
+
 Rails/Delegate:
   Enabled: false
 
