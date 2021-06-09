@@ -29,6 +29,17 @@ RSpec.describe MoonAge, type: :model do
       it { is_expected.to eq 1.1 }
     end
 
+    context 'when 2021/06/10, new moon is today' do
+      let(:tonight) { Time.zone.local(2022, 5, 30, 1, 29) }
+
+      before do
+        create :moon_age, :'20220501'
+        create :moon_age, :'20220530'
+      end
+
+      it { is_expected.to eq 28.8 }
+    end
+
     context 'when JST time' do
       let(:tonight) { Time.zone.local(2021, 5, 12, 21, 35) }
 
@@ -61,6 +72,17 @@ RSpec.describe MoonAge, type: :model do
       end
 
       it { is_expected.to eq 1.1 }
+    end
+
+    context 'when 2021/06/10, new moon is today' do
+      let(:date) { Time.zone.local(2022, 5, 30, 1, 29) }
+
+      before do
+        create :moon_age, :'20220501'
+        create :moon_age, :'20220530'
+      end
+
+      it { is_expected.to eq 28.8 }
     end
 
     context 'when the new moon is not applicable' do

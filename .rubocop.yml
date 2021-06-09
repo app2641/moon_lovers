@@ -15,7 +15,7 @@ AllCops:
     - 'spec/spec_helper.rb'
 
 Metrics/BlockLength:
-  Max: 50
+  Max: 70
 
 Metrics/CyclomaticComplexity:
   Max: 10

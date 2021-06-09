@@ -30,7 +30,7 @@ class MoonAge < ApplicationRecord
     private
 
     def calculate(start_date:, end_date:)
-      new_moon = MoonAge.where(datetime: start_date.beginning_of_day..end_date.end_of_day).last
+      new_moon = MoonAge.where(datetime: start_date.beginning_of_day..end_date).last
       raise 'MoonAge record is not applicable' if new_moon.nil?
 
       difference = end_date - new_moon.datetime
