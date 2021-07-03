@@ -29,6 +29,9 @@ Rails/EnvironmentVariableAccess:
 Rails/Delegate:
   Enabled: false
 
+RSpec/DescribeClass:
+  Enabled: false
+
 Style/ClassAndModuleChildren:
   EnforcedStyle: nested
 
