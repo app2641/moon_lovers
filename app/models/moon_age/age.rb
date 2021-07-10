@@ -12,5 +12,9 @@ class MoonAge
     def full_moon?
       age.round == 15
     end
+
+    def new_moon?
+      [0, 30].include?(age.round)
+    end
   end
 end

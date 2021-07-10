@@ -18,4 +18,32 @@ RSpec.describe MoonAge::Age, type: :model do
       it { is_expected.to be false }
     end
   end
+
+  describe '#new_moon?' do
+    subject { described_class.new(age: age).new_moon? }
+
+    context 'when age is 0.4' do
+      let(:age) { 0.4 }
+
+      it { is_expected.to be true }
+    end
+
+    context 'when age is 0.5' do
+      let(:age) { 0.5 }
+
+      it { is_expected.to be false }
+    end
+
+    context 'when age is 29.4' do
+      let(:age) { 29.4 }
+
+      it { is_expected.to be false }
+    end
+
+    context 'when age is 29.5' do
+      let(:age) { 29.5 }
+
+      it { is_expected.to be true }
+    end
+  end
 end
