@@ -39,5 +39,12 @@ RSpec.describe 'firebase' do
 
       it { expect(Fcm::Topic).to have_received(:notify).with(payload).once }
     end
+
+    context 'when age is new moon' do
+      let(:age) { MoonAge::Age.new(age: 0.4) }
+      let(:body) { '今夜は新月です' }
+
+      it { expect(Fcm::Topic).to have_received(:notify).with(payload).once }
+    end
   end
 end
