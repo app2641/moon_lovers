@@ -154,7 +154,7 @@ GEM
     hashdiff (1.0.1)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.11.2)
+    jbuilder (2.11.3)
       activesupport (>= 5.0.0)
     jwt (2.2.3)
     loofah (2.13.0)
@@ -302,7 +302,7 @@ DEPENDENCIES
   faraday
   faraday_middleware
   googleauth
-  jbuilder (~> 2.7)
+  jbuilder (~> 2.11)
   mysql2 (~> 0.5)
   rack-mini-profiler (~> 2.3)
   rails (~> 6.1.4)
