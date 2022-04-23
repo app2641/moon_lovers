@@ -8,7 +8,7 @@ gem 'rails', '~> 6.1.4'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.7'
+gem 'jbuilder', '~> 2.11'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
