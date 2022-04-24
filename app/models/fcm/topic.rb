@@ -11,7 +11,7 @@ module Fcm
     end
 
     def notify(payload)
-      response = client.connection.post("/v1/projects/#{ENV['FIREBASE_PROJECT_ID']}/messages:send", payload)
+      response = client.connection.post("/v1/projects/#{ENV.fetch('FIREBASE_PROJECT_ID', nil)}/messages:send", payload)
       Error.catch!(response)
     end
 
