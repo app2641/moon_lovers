@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Fcm::Topic, type: :model do
+RSpec.describe Fcm::Topic do
   let(:klass) { described_class }
 
   describe '#notify' do

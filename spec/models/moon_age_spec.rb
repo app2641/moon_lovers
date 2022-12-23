@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe MoonAge, type: :model do
+RSpec.describe MoonAge do
   around do |example|
     Time.use_zone('Asia/Tokyo', &example)
   end
@@ -13,7 +13,7 @@ RSpec.describe MoonAge, type: :model do
     context 'when 2022/03/02, longer than 1 month' do
       let(:tonight) { Time.zone.local(2022, 3, 2).end_of_day }
 
-      before { create :moon_age, :'20220201' }
+      before { create(:moon_age, :'20220201') }
 
       it { is_expected.to eq 29.4 }
     end
@@ -22,8 +22,8 @@ RSpec.describe MoonAge, type: :model do
       let(:tonight) { Time.zone.local(2022, 5, 31).end_of_day }
 
       before do
-        create :moon_age, :'20220501'
-        create :moon_age, :'20220530'
+        create(:moon_age, :'20220501')
+        create(:moon_age, :'20220530')
       end
 
       it { is_expected.to eq 1.1 }
@@ -33,8 +33,8 @@ RSpec.describe MoonAge, type: :model do
       let(:tonight) { Time.zone.local(2022, 5, 30, 1, 29) }
 
       before do
-        create :moon_age, :'20220501'
-        create :moon_age, :'20220530'
+        create(:moon_age, :'20220501')
+        create(:moon_age, :'20220530')
       end
 
       it { is_expected.to eq 28.8 }
@@ -44,8 +44,8 @@ RSpec.describe MoonAge, type: :model do
       let(:tonight) { Time.zone.local(2021, 5, 12, 21, 35) }
 
       before do
-        create :moon_age,
-               year: 2021, month:	5, state: 0, date: '2021/05/12', datetime: '2021/05/12 04:00'
+        create(:moon_age,
+               year: 2021, month:	5, state: 0, date: '2021/05/12', datetime: '2021/05/12 04:00')
       end
 
       it { is_expected.to eq 0.7 }
@@ -58,7 +58,7 @@ RSpec.describe MoonAge, type: :model do
     context 'when 2022/03/02, longer than 1 month' do
       let(:date) { Time.zone.local(2022, 3, 2).end_of_day }
 
-      before { create :moon_age, :'20220201' }
+      before { create(:moon_age, :'20220201') }
 
       it { is_expected.to eq 29.4 }
     end
@@ -67,8 +67,8 @@ RSpec.describe MoonAge, type: :model do
       let(:date) { Time.zone.local(2022, 5, 31).end_of_day }
 
       before do
-        create :moon_age, :'20220501'
-        create :moon_age, :'20220530'
+        create(:moon_age, :'20220501')
+        create(:moon_age, :'20220530')
       end
 
       it { is_expected.to eq 1.1 }
@@ -78,8 +78,8 @@ RSpec.describe MoonAge, type: :model do
       let(:date) { Time.zone.local(2022, 5, 30, 1, 29) }
 
       before do
-        create :moon_age, :'20220501'
-        create :moon_age, :'20220530'
+        create(:moon_age, :'20220501')
+        create(:moon_age, :'20220530')
       end
 
       it { is_expected.to eq 28.8 }
