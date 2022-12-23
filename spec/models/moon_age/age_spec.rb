@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe MoonAge::Age, type: :model do
+RSpec.describe MoonAge::Age do
   describe '#full_moon?' do
     subject { described_class.new(age: age).full_moon? }
 
