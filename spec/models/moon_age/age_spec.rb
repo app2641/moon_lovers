@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe MoonAge::Age do
   describe '#full_moon?' do
-    subject { described_class.new(age: age).full_moon? }
+    subject { described_class.new(age:).full_moon? }
 
     context 'when age is full moon' do
       let(:age) { 14.5 }
@@ -20,7 +20,7 @@ RSpec.describe MoonAge::Age do
   end
 
   describe '#new_moon?' do
-    subject { described_class.new(age: age).new_moon? }
+    subject { described_class.new(age:).new_moon? }
 
     context 'when age is 0.4' do
       let(:age) { 0.4 }

@@ -2,7 +2,7 @@
 
 module Fcm
   class Topic
-    TONIGHT = "#{Rails.env}-android-tonight"
+    TONIGHT = "#{Rails.env}-android-tonight".freeze
 
     class << self
       def notify(payload)

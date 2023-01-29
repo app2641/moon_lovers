@@ -20,7 +20,7 @@ namespace :firebase do
         topic: Fcm::Topic::TONIGHT,
         notification: {
           title: '月齢通知',
-          body: body
+          body:
         }
       }
     }

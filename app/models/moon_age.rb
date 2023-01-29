@@ -23,7 +23,7 @@ class MoonAge < ApplicationRecord
         last_month = date - 2.months
 
         age = calculate(start_date: last_month, end_date: date)
-        MoonAge::Age.new(age: age)
+        MoonAge::Age.new(age:)
       end
     end
 
