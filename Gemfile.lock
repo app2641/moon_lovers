@@ -207,8 +207,8 @@ GEM
       ast (~> 2.4.1)
     public_suffix (5.0.1)
     racc (1.6.2)
-    rack (2.2.6.4)
-    rack-mini-profiler (3.0.0)
+    rack (2.2.7)
+    rack-mini-profiler (3.1.0)
       rack (>= 1.2.0)
     rack-test (2.0.2)
       rack (>= 1.3)
@@ -328,7 +328,7 @@ DEPENDENCIES
   googleauth
   jbuilder (~> 2.11)
   mysql2 (~> 0.5)
-  rack-mini-profiler (~> 3.0)
+  rack-mini-profiler (~> 3.1)
   rails (~> 7.0.4)
   rspec-rails
   rubocop
