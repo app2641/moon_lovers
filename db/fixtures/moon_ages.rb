@@ -41,6 +41,19 @@ Time.use_zone('Asia/Tokyo') do
     { id: 34, year: 2023,	month: 9, state: 0, date: '2023/09/15', datetime: '2023/09/15 10:40' },
     { id: 35, year: 2023,	month: 10, state: 0, date: '2023/10/15', datetime: '2023/10/15 02:55' },
     { id: 36, year: 2023,	month: 11, state: 0, date: '2023/11/13', datetime: '2023/11/13 18:27' },
-    { id: 37, year: 2023,	month: 12, state: 0, date: '2023/12/13', datetime: '2023/12/13 08:32' }
+    { id: 37, year: 2023,	month: 12, state: 0, date: '2023/12/13', datetime: '2023/12/13 08:32' },
+    { id: 38, year: 2024,	month: 1, state: 0, date: '2024/01/11', datetime: '2024/01/11 20:57' },
+    { id: 39, year: 2024,	month: 2, state: 0, date: '2024/02/10', datetime: '2024/01/11 07:59' },
+    { id: 40, year: 2024,	month: 3, state: 0, date: '2024/03/10', datetime: '2024/03/10 18:00' },
+    { id: 41, year: 2024,	month: 4, state: 0, date: '2024/04/09', datetime: '2024/04/09 03:21' },
+    { id: 42, year: 2024,	month: 5, state: 0, date: '2024/05/08', datetime: '2024/05/08 12:22' },
+    { id: 43, year: 2024,	month: 6, state: 0, date: '2024/06/06', datetime: '2024/06/06 21:38' },
+    { id: 44, year: 2024,	month: 7, state: 0, date: '2024/07/06', datetime: '2024/07/06 07:57' },
+    { id: 45, year: 2024,	month: 8, state: 0, date: '2024/08/04', datetime: '2024/08/04 20:13' },
+    { id: 46, year: 2024,	month: 9, state: 0, date: '2024/09/03', datetime: '2024/09/03 10:56' },
+    { id: 47, year: 2024,	month: 10, state: 0, date: '2024/10/03', datetime: '2024/10/03 03:49' },
+    { id: 48, year: 2024,	month: 11, state: 0, date: '2024/11/01', datetime: '2024/11/01 21:47' },
+    { id: 49, year: 2024,	month: 12, state: 0, date: '2024/12/01', datetime: '2024/12/01 15:21' },
+    { id: 50, year: 2024,	month: 12, state: 0, date: '2024/12/31', datetime: '2024/12/31 07:27' }
   )
 end
