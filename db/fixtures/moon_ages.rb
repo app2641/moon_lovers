@@ -43,7 +43,7 @@ Time.use_zone('Asia/Tokyo') do
     { id: 36, year: 2023,	month: 11, state: 0, date: '2023/11/13', datetime: '2023/11/13 18:27' },
     { id: 37, year: 2023,	month: 12, state: 0, date: '2023/12/13', datetime: '2023/12/13 08:32' },
     { id: 38, year: 2024,	month: 1, state: 0, date: '2024/01/11', datetime: '2024/01/11 20:57' },
-    { id: 39, year: 2024,	month: 2, state: 0, date: '2024/02/10', datetime: '2024/01/11 07:59' },
+    { id: 39, year: 2024,	month: 2, state: 0, date: '2024/02/10', datetime: '2024/02/10 07:59' },
     { id: 40, year: 2024,	month: 3, state: 0, date: '2024/03/10', datetime: '2024/03/10 18:00' },
     { id: 41, year: 2024,	month: 4, state: 0, date: '2024/04/09', datetime: '2024/04/09 03:21' },
     { id: 42, year: 2024,	month: 5, state: 0, date: '2024/05/08', datetime: '2024/05/08 12:22' },
